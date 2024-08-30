@@ -1,0 +1,38 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript 變數</title>
+    </head>
+    <script>
+        /*
+        變數宣告語法 let方法:let 變數名稱;  
+        */
+       //指定變數方法//
+       let x;
+       console.log(x)
+
+       x=5
+       console.log(x)
+
+       x="hello"
+       console.log(x)
+
+       /*--------------------------
+       常數宣告語法
+       constant 常數名稱 = 常數資料
+       **必需在宣告時建立資料，且不可更改** 
+       */
+      const y = 5
+
+      console.log(y)
+    
+      /**報錯 Uncaught TypeError: Assignment to constant variable.**/
+      y = 10
+      console.log(y)
+
+    
+
+    </script> 
