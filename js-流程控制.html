@@ -1,0 +1,30 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript 變數</title>
+    </head>
+    <body>
+        <script>
+
+            /** if判斷式語法 : if(布林值)
+                                {判斷式為ture，執行該區塊code}
+                              else if(布林值)
+                                {判斷式為ture，執行該區塊code}......多個條件對應
+                              eles
+                                {如果判斷式為flase，執行該區塊code}
+            **/
+
+            let money = prompt("請輸入提取金額")
+            if (money<=100000){
+                console.log("提取成功")
+            }else if(money<=100){
+                console.log("最低提領100")
+            }else{
+                console.log("金額過大提取失敗")
+            }
+        </script>
+    </body>
+    
