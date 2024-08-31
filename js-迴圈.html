@@ -1,0 +1,54 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript loop</title>
+    </head>
+    <body>
+        <script>
+            /**迴圈:
+             while迴圈:
+             while(布林值){
+             若布林值為ture，執行程式區塊}
+             ex:
+             len n=0
+             while(n<0){
+             console.log(n);
+             n++;}
+
+             for迴圈:
+             for(初始程式;布林值;每次轉圈執行){
+             若布林值為ture，執行程式區塊
+             }
+             ex:
+             for(len n=0;n<0;n++){
+             console.log(n);}
+             **/
+            /**let n=0
+            while(n<10){
+            console.log(n);
+            n++;}
+
+            for(let n=0;n<10;n+=2){
+            console.log(n);}**/
+
+            //ex:計算1+2+3+4...+10的結果
+            let n=0;
+            let n1=0;
+            for(let n=0;n<=10;n++){
+                n1+=n
+            }
+            console.log(n1)
+
+            
+            let n2=0;
+            let n3=0;
+            while(n2<=10){
+                n3+=n2
+                n2++;
+            }
+            console.log(n3)
+        </script>
+    </body>
