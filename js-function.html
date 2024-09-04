@@ -61,6 +61,23 @@
             }
 
             test2(21,3)
+
+            /** 函式的回傳值**/
+            let count = 0;
+            while (count<10){
+                let return_text = function(number1,number2){
+                    if(number1*5<=number2){
+                        return  `${number1} 的五倍沒有大於 ${number2}`;
+                    }else{
+                        return `${number1} 的五倍大於 ${number2}`;
+                    };
+                };
+                count++
+                let ans = return_text(count,15);
+                console.log(ans);
+
+                };
+            
         </script>
     </body>
     
