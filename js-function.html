@@ -1,0 +1,66 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript function</title>
+    </head>
+    <body>
+        <script>
+
+            /** 語法:
+             function 函式名稱(參數列表){
+             程式區塊};
+
+            呼叫函式:
+            函式名稱(參數列表);
+
+            **/
+
+            //ex:單一參數
+            function test(show){
+                console.log(show)
+            };
+
+            test("hello");
+            test("My name is jash,and you?")
+
+            //多參數
+            function add (n1,n2){
+                let result = n1 + n2;
+                console.log(result) 
+            };
+
+            add(2,8);
+            add("hello"," world")
+
+            /**第二語法:
+             let 函式名稱 = function(參數列表){
+             程式區塊
+             }**/
+            
+             //ex:第二語法
+
+             let add2 = function(n1,n2){
+                let show = n1+n2
+                console.log(show)
+
+             };
+             add2(2,8);
+            add2("hello"," world");
+
+            //ex2:
+            let test2 = function(a1,a2){
+
+                if (a1*10%a2 == 0){
+                    console.log("a1的10被能被a2整除")
+                }else if(a1*10%a2 !=0){
+                    console.log("a1的10被不能被a2整除")
+                };
+            }
+
+            test2(21,3)
+        </script>
+    </body>
+    
