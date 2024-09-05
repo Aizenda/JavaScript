@@ -1,0 +1,86 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>流程控制,物件基礎</title>
+    </head>
+    <body>
+        <script>
+            /**建立物件:
+             new Object()
+             可以放進變數:
+             let obj = new Object()
+
+             物件成員:在物件內的封裝code
+             function也可以是物件成員 
+             當成員為非函式如obj.x = 3稱為屬性
+             ，若成員為function則稱為方法
+             ex:
+             obj.x = 3; ----為物件屬性 
+             obj.show = function(){
+             console.log("hello")
+             };  -----為方法
+
+             this關鍵字:
+             在物件方法中使用this關鍵字，表示this為物件本身，可以在物件中呼叫物件屬性或方法。
+             ex:
+             let obj = new Object()
+             obj.x = 3;
+             obj.y = 4;
+             obj.show = function(){
+             console.log(this.x+this.y)
+             }; 
+
+             建立json物件表示法(JavaScript object Notation)語法為py中的字典:
+             let obj1{};
+             let obj26{
+             x:3;
+             y:4;
+             show:function(){
+             console.log(this.x+this.4)
+                };
+             };**/
+            
+            /*
+            //建立物件
+            let man = new Object();
+            man.age = 24;
+            man.name = "jash";
+            man.talk = function(){
+                console.log("hello");
+            };
+
+            //使用物件
+            console.log(man);
+            console.log(man.age>20);
+            console.log(man.name);
+            man.talk();
+
+            //this關鍵字
+            let man2 = new Object();
+            man2.age = 24;
+            man2.name = "jash";
+            man2.talk = function(){
+                console.log("hello 我是",this.name,"年齡",this.age);
+            };
+
+            man2.talk();
+            */
+
+            //json
+            let man = {
+                age:24,
+                name:"jash",
+                talk:function(){
+                console.log("hello 我是",this.name,"年齡",this.age)
+                }
+            }
+
+            console.log(man);
+            console.log(man.age>20);
+            console.log(man.name);
+            man.talk();
+
+        </script>
