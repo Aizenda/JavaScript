@@ -1,0 +1,52 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript function</title>
+    </head>
+    <body>
+        <script>
+            /**Array object:
+             js內建的物件;
+             利用順序編號，管理內部資料;
+
+             建立陣列物件:
+             new Array() or []
+             ex:
+             let arr = []; ---建立空白陣列
+             arr.push(3); ---使用push將資料放入Array
+             arr.push(4);
+            取得資料:
+            console.log(arr(0));
+            console.log(arr(1));
+
+            陣列長度:
+            使用length屬性取得長度
+            陣列.length
+            ex:
+            console.log(arr.length);
+            **/
+
+            //建立Array
+            /*let grades = []
+            grades.push(50);
+            grades.push(98);
+            grades.push(75);
+
+            console.log(grades[0])*/
+
+            //2
+            let grades = [50,75,85,90]
+            //利用for迴圈逐一取得array中的資料
+            let total = 0;
+            for(let i=0;i<grades.length;i++){
+                total += grades[i];
+            }
+
+            let avg = total/grades.length
+            console.log(avg);
+            
+        
+        </script>
