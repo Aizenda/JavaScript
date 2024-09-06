@@ -1,0 +1,37 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript html-dom</title>
+    </head>
+    <body>
+        <script>
+            //window物件(html dom結構的最上層)
+            console.log(window);
+            //取得視窗的寬度高度
+            console.log(window.innerHeight,window.innerWidth);
+            //取得螢幕的尺寸
+            console.log(window.screen.height,window.screen.width);
+            //取得網址資訊
+            console.log(window.location.href);
+            //更改網頁網址(跳轉網頁)
+            //window.location.href = "https://google.com"
+
+            //document
+            console.log(window.document);
+            console.dir(document);
+            //取得網頁標題
+            console.log(document.title);
+            //更改網頁標題
+            document.title = "js-text";
+            //取得body標籤
+            console.log(document.body);
+            //取得標籤的內文
+            console.log(document.body.innerHTML);
+            //更改主畫面內文
+            document.body.innerHTML = "Hello html dom"
+
+        </script>
+    </body>
