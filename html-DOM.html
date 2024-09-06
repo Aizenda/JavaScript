@@ -7,7 +7,15 @@
         <title>javascript html-dom</title>
     </head>
     <body>
+        <!--html dom 實際操作 -->
+        <h3>HTML DOM 畫面操作</h3>
+        <div id = "content">練習操作</div>
+        <bottom onclick = "change();">點我</bottom>
+        <style>
+            .text{text-decoration: underline;font-weight:bolder;}
+        </style>
         <script>
+            /**
             //window物件(html dom結構的最上層)
             console.log(window);
             //取得視窗的寬度高度
@@ -25,13 +33,24 @@
             //取得網頁標題
             console.log(document.title);
             //更改網頁標題
-            document.title = "js-text";
+            //document.title = "js-text";
             //取得body標籤
             console.log(document.body);
             //取得標籤的內文
             console.log(document.body.innerHTML);
             //更改主畫面內文
             document.body.innerHTML = "Hello html dom"
-
+            **/
+           function change(){
+            //取得標籤物件
+            let elem = document.querySelector("#content");
+            console.log(elem);
+            //操作標籤物件
+            elem.innerHTML = "對特定的標籤做操作"
+            elem.className = "text"
+            elem.style.fontSize = "50px";
+            elem.style.color = "red";
+           }
+           
         </script>
     </body>
