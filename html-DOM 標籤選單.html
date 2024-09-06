@@ -1,0 +1,35 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript html-dom標籤選單練習</title>
+    </head>
+    <body>
+        <div>
+            <span onclick="chang1()">關於我</span>
+            <span onclick="chang2()">學經歷</span>
+        </div>
+        <hr/>
+        <div id = "about">大家好，我是正杰</div>
+        <div id = "exps" style = "display:none">我是工管系畢業，想當軟體工程師</div>
+        <script>
+            function chang1(){
+                let aboutDiv = document.querySelector("#about");
+                let expsDiv = document.querySelector("#exps");
+                aboutDiv.style.display = "block";
+                expsDiv.style.display = "none";
+
+            };
+
+            function chang2(){
+                let aboutDiv = document.querySelector("#about");
+                let expsDiv = document.querySelector("#exps");
+                aboutDiv.style.display = "none";
+                expsDiv.style.display = "block";
+
+            };
+
+        </script>
+    </body>
