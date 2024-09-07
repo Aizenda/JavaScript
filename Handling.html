@@ -1,0 +1,74 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript:事件處理</title>
+    </head>
+    <body>
+        <h3>事件處理的練習</h3>
+        <!--<botton
+        onclick = "console.log('點擊事件');"
+        onmouseover="console.log('滑鼠移入');"
+        onmouseout="console.log('滑鼠移出');"
+        onmousedown="console.log('滑鼠點下');"
+        onmouseup="console.log('滑鼠放開')">
+        點我
+        </botton>-->
+
+        <style>
+            .btn{
+                background-color: aqua;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                
+            }
+        </style>
+        
+        <span 
+            class="btn" 
+            onmouseover="over(this)" 
+            onmouseout="out(this)"
+            onmousedown="down(this)"
+            onmouseup="up(this)"
+        >點我</span>
+        <span
+        class="btn" 
+            onmouseover="over(this)" 
+            onmouseout="out(this)"
+            onmousedown="down(this)"
+            onmouseup="up(this)"
+        >第二個按鈕</span>
+        
+        <script>
+            //even handling 寫法
+            function over(elem){
+                elem.style.backgroundColor="red";
+            };
+
+            function out(elem){
+                elem.style.backgroundColor="blue";
+            };
+
+            function down(elem){
+                elem.style.fontWeight="bolder";
+            };
+
+            function up(elem){
+                elem.style.fontWeight="";
+            };
+
+            /**HTML DOM寫法
+            function over(){
+                let mouseovercolor=document.querySelector(".btn")
+                mouseovercolor.style.backgroundColor="red";
+            }
+
+            function out(){
+                let mouseoutcolor=document.querySelector(".btn")
+                mouseoutcolor.style.backgroundColor="blue";
+            }**/
+        </script>
+    </body>
