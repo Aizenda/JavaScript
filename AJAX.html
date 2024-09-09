@@ -1,0 +1,31 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript : AJAX 網路連線實物</title>
+    </head>
+    <body>
+        <h3>AJAX / XHR 網路連線練習</h3>
+        <bottom onclick="gitData();">點擊取得連線</bottom>
+        <div id="result">
+
+        </div>
+        <script>
+            //利用 fetch進行連線並取的資料
+            function gitData(){
+                fetch("https://cwpeng.github.io/live-records-samples/data/products.json").then(function(response){
+                    return response.json();
+                }).then(function(data){
+                //將取得的資料,呈現在console
+                let result=document.querySelector("#result");
+                result.innerHTML="";
+                for(let i=0;i<data.length;i++){
+                    let product=data[i];
+                    result.innerHTML+="<div>"+product.name+","+product.pric+","+product.description+"</div>";
+                }
+            });
+                
+            }
+        </script>
