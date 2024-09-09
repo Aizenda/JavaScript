@@ -1,0 +1,43 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript :arrow function</title>
+    </head>
+    <body>
+        <script>
+            //使用function 做1+2+3+4...+10
+            /**function add(i){
+                let result=0;
+                for(let n=1;n<=i;n++){
+                    result+=n;
+                };
+                return result
+            };
+            let ans1=add(10);
+            let ans2=add(20);
+            console.log(ans1,ans2);**/
+
+            //使用arrow function 做1+2+3+4...+10
+            let add=(i)=>{
+                let result=0;
+                for(let n=1;n<=i;n++){
+                    result+=n;
+                };
+                return result
+            };
+            //呼叫function
+            let ans1=add(10);
+            let ans2=add(20);
+            console.log(ans1,ans2);
+
+            //簡化arrow finction(乘法函式)---簡化前提為程式區塊內只能為return
+            let multiply=(n1,n2)=>(n1*n2);
+            let ans3=multiply(10,5);
+            console.log(ans3);
+
+        </script>
+    </body>
+</html>
