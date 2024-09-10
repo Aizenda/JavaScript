@@ -1,0 +1,82 @@
+<!DOCTYPE html>                         <!-- 文件的宣告 -->
+<html>                                  <!-- 最外層是 html標籤-->
+    <head>
+        <!-- 告訴瀏覽器網頁編碼 utf-8 萬國碼 可以支援全世界的語言-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>javascript : Destructuring Assignment</title>
+    </head>
+    <body>
+        <script>
+            //array 解構賦值
+            let arr=[3,4,5];
+            let d1, d2, d3 ;
+            //傳統方式
+            /**
+            let d1=arr[0];
+            let d2=arr[1];
+            let d3=arr[2];
+            console.log(d1,d2,d3);
+            **/
+
+            //解構賦值與宣告一起
+            /**let [d1, d2, d3]=arr;
+            console.log(d1,d2,d3);**/
+
+            //分開寫
+            [d1, d2 ,d3,]=arr;
+            console.log(d1,d2,d3);
+
+            //給予預設值
+            [d1, d2 ,d3, d4=10]=arr;
+            console.log(d1, d2, d3, d4);
+
+            //解構賦值運用:變數交換
+            let n1=2;
+            let n2=3;
+            [n1,n2]=[n2,n1];
+            console.log(n1,n2);
+            //ex2給予預設值
+            [n1, n2, n3=0]=[n2,n1];
+            console.log(n1, n2, n3);
+
+            //解構賦值運用:變數交換 解構賦值與宣告一起
+            let [n4, n5, n6=10]=[a4=1,a5=3];
+            console.log(n4,n5,n6);
+
+            //objet 解構賦值
+            
+            //傳統方式
+            let obj={a1:3, a2:4, a3:5};
+            /**let obj1=obj.a1;
+            let obj2=obj.a2;
+            let obj3=obj.a3;**/
+
+            //obj解構賦值
+           /** let {x, y, z}=obj;//物件的對應方式是用名稱做對應，名稱不同匯出先undefined
+            let {a1, a2, a3}=obj;//正確方式
+            console.log(a1, a2, a3);**/
+
+            //obj解構賦值宣告分開寫
+            let a1, a2, a3;
+            ({a1, a2, a3}=obj);//需要小括號
+            console.log(a1, a2, a3);
+
+            //obj解構賦值預設值
+            ({a1, a2, a3, a4=10}=obj);//需要小括號
+            console.log(a1, a2, a3, a4);
+
+            //obj使用不同的名稱
+            let newa1, newa2, newa3;
+            ({a1:newa1, a2:newa2, a3:newa3}=obj);
+            console.log(newa1, newa2, newa3);
+
+            //統整function的物件參數
+            function add({n1, n2}){
+                return n1+n2;
+            };//參數內賦值須加小括號
+
+            let sum=add({n1:3,n2:4});
+            console.log(sum);
+        </script>
+    </body>
