@@ -38,6 +38,7 @@ ul li {
 
 main {
     padding: 20px;
+    max-high:auto;
 }
 
 footer {
